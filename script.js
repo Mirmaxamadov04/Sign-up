@@ -7,6 +7,8 @@ elLogin = document.querySelector(".login");
 elGoBack = document.querySelector(".go-back");
 elResBtnSign = document.querySelector(".res-btn-sign");
 elResBtnLogin = document.querySelector(".res-btn-login ");
+// elInput = document.querySelector(".sign-up__input");
+// ellabel = document.querySelector(".sign-up-label");
 
 const toconvertform = function (mainLeft, mainRight, login, signUp, goBack) {
   mainLeft.style.opacity = "0";
@@ -37,6 +39,10 @@ elResBtnLogin.addEventListener("click", (evt) => {
   evt.preventDefault();
   toconvertform(elMainRight, elMainLeft, elSignUp, elLogin, elGoBack);
 });
+
+// if (elInput.value != "") {
+//   ellabel.style.display = "none";
+// }
 
 // elSignUpHeading = document.querySelector(".sign-up__heading");
 // elSignUpInput = document.querySelector("#email");

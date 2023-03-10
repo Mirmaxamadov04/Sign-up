@@ -149,7 +149,7 @@ body {
 
 .sign-up__span {
   margin-left: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .sign-up__form {
@@ -174,17 +174,17 @@ body {
   margin-bottom: 20px;
   max-width: 270px;
   border: none;
-  transform: translate(4%, -102%);
+  transform: translate(4%, -202%);
 }
 
 .sign-up__form input:focus + label {
   transition: 0.5s;
-  transform: translate(4%, -200%);
+  transform: translate(4%, -300%);
 }
 
 .login__form input:focus + label {
   transition: 0.5s;
-  transform: translate(4%, -200%);
+  transform: translate(4%, -300%);
 }
 .sign-up__button {
   width: 120px;
