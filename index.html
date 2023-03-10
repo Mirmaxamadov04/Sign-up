@@ -5,7 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign up</title>
-    <link rel="stylesheet" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500;600;700;800;900&family=Barlow:wght@300;400;500;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,700;9..144,900&family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;700&family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
   </head>
   <body>
     <section class="container">
@@ -36,17 +43,74 @@
           </div>
         </div>
       </div>
-      <div class="sign-up">
-        <h3 class="sign-up__heading">Sign up</h3>
-        <span class="span sign-up__span"></span>
-        <form action="" class="sign-up__form">
-          <input type="text" class="sign-up__input" placeholder="Full name" />
-          <input type="text" class="sign-up__input" placeholder="Email" />
-          <input type="text" class="sign-up__input" placeholder="Password" />
-          <button type="submit" class="sign-up__button">Sign up</button>
-        </form>
+
+      <div class="go-back">
+        <div class="sign-up">
+          <h3 class="sign-up__heading">Sign up</h3>
+          <span class="span sign-up__span"></span>
+          <form action="" class="sign-up__form">
+            <input
+              type="text"
+              class="sign-up__input"
+              id="name"
+              placeholder=""
+            />
+            <label for="name" class="sign-up-label">Full name</label>
+
+            <input
+              type="email"
+              class="sign-up__input"
+              id="email"
+              placeholder=""
+              value=""
+            />
+            <label for="email" class="sign-up-label">Email</label>
+
+            <input
+              type="password"
+              id="password"
+              class="sign-up__input"
+              placeholder=""
+            />
+            <label for="password" class="sign-up-label">Password</label>
+
+            <button type="submit" class="sign-up__button">Sign up</button>
+          </form>
+        </div>
+
+        <div class="login">
+          <h3 class="sign-up__heading login__heading">Login</h3>
+          <span class="span sign-up__span login__span"></span>
+          <form action="" class="sign-up__form login__form">
+            <input
+              type="text"
+              class="sign-up__input login__input"
+              id="name1"
+              placeholder=""
+            />
+            <label for="name1" class="sign-up-label">Full name</label>
+
+            <input
+              type="password"
+              id="password1"
+              class="sign-up__input login__input"
+              placeholder=""
+            />
+            <label for="password1" class="sign-up-label">Password</label>
+
+            <button type="submit" class="sign-up__button login__button">
+              Login
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="res-btns">
+        <button class="res-btn-sign">Sign-up</button>
+        <button class="res-btn-login">Login</button>
       </div>
     </section>
+
     <script src="./script.js"></script>
   </body>
 </html>
