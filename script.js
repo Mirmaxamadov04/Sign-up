@@ -7,6 +7,13 @@ elLogin = document.querySelector(".login");
 elGoBack = document.querySelector(".go-back");
 elResBtnSign = document.querySelector(".res-btn-sign");
 elResBtnLogin = document.querySelector(".res-btn-login ");
+elPasswordEyeSign = document.querySelector("#password-img-sign");
+elPasswordEyeLogin = document.querySelector("#password-img-login");
+elPassword = document.querySelector("#password");
+elPassword1 = document.querySelector("#password1");
+elInput = document.querySelector("input");
+elLabel = document.querySelector("label");
+
 // elInput = document.querySelector(".sign-up__input");
 // ellabel = document.querySelector(".sign-up-label");
 
@@ -16,6 +23,17 @@ const toconvertform = function (mainLeft, mainRight, login, signUp, goBack) {
   login.style.display = "none";
   signUp.style.display = "block";
   goBack.classList.toggle("signclicked");
+};
+
+const passwordSee = function (imgPath, InputPath) {
+  if (InputPath.type === "password") {
+    InputPath.type = "text";
+    imgPath.src = "./images/eye.png";
+  } else if (InputPath.type === "text") {
+    InputPath.type = "password";
+    imgPath.src = "./images/eye-not.png";
+    console.log("hi");
+  }
 };
 
 elButtonRight.addEventListener("click", (evt) => {
@@ -40,39 +58,12 @@ elResBtnLogin.addEventListener("click", (evt) => {
   toconvertform(elMainRight, elMainLeft, elSignUp, elLogin, elGoBack);
 });
 
-// if (elInput.value != "") {
-//   ellabel.style.display = "none";
-// }
+elPasswordEyeSign.addEventListener("click", (evt) => {
+  evt.preventDefault();
+  passwordSee(elPasswordEyeSign, elPassword);
+});
 
-// elSignUpHeading = document.querySelector(".sign-up__heading");
-// elSignUpInput = document.querySelector("#email");
-// elSignUpButton = document.querySelector(".sign-up__button");
-
-// elLogin = document.querySelector(".login");
-
-//events
-// elButtonRight.addEventListener("click", (evt) => {
-//   evt.preventDefault();
-
-//   elSignUp.classList.toggle("clicked");
-//   setTimeout(() => {
-//     elMainLeft.style.opacity = "1";
-//     elMainRight.style.opacity = "0";
-//     elSignUpHeading.textContent = "Login";
-//     elSignUpInput.style.display = "none";
-//     elSignUpButton.textContent = "Login";
-//   }, 800);
-// });
-
-// elButtonLeft.addEventListener("click", (evt) => {
-//   evt.preventDefault();
-
-//   setTimeout(() => {
-//     elSignUp.classList.toggle("clicked");
-//     elMainRight.style.opacity = "1";
-//     elMainLeft.style.opacity = "0";
-//     elSignUpHeading.textContent = "Sign up";
-//     elSignUpInput.style.display = "block";
-//     elSignUpButton.textContent = "Sign up";
-//   }, 400);
-// });
+elPasswordEyeLogin.addEventListener("click", (evt) => {
+  evt.preventDefault();
+  passwordSee(elPasswordEyeLogin, elPassword1);
+});
